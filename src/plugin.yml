@@ -1,0 +1,10 @@
+name: NoNetherRoof
+version: 1.0.2
+main: me.kevinnovak.nonetherroof.NoNetherRoof
+author: KevinNovak
+description: Prevent players from going to the top of the nether!
+
+permissions:
+    nonetherroof.bypass:
+        description: Allow players on top of the nether.
+        default: op

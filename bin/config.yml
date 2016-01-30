@@ -1,0 +1,18 @@
+# Configuration file for NoNetherRoof
+# https://www.spigotmc.org/resources/nonetherroof.17730/
+
+# What is the top layer of the nether?
+# In other words, what is the y-coodinate
+# of the nethers uppermost bedrock?
+# default: netherTopLayer: 127
+netherTopLayer: 127
+
+# What message should be displayed when players
+# attempt to go to the top of the nether?
+# default: netherTopMessage: '&cTop of the Nether is not allowed!'
+netherTopMessage: '&cTop of the Nether is not allowed!'
+
+# Whether or not to collect data on plugin usage
+# Viewable at http://mcstats.org/plugin/NoNetherRoof
+# default: metrics: true
+metrics: true
