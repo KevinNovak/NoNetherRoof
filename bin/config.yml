@@ -3,7 +3,7 @@
 # Created by KevinNovak
 
 # Whether or not to collect data on plugin usage
-# Viewable at http://mcstats.org/plugin/NoNetherRoof
+# Viewable at http://mcstats.org/plugin/NoNetherRoof/
 # default: metrics: true
 metrics: true
 
