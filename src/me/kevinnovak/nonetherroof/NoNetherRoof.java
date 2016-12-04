@@ -5,6 +5,7 @@ import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Location;
 import org.bukkit.Material;
+import org.bukkit.World.Environment;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -45,7 +46,7 @@ public class NoNetherRoof extends JavaPlugin implements Listener{
     @EventHandler
     public void onPlayerMove(PlayerMoveEvent event) {
         final Player player = event.getPlayer();
-        if (player.getLocation().getWorld().getName().endsWith("_nether")) {
+        if (player.getWorld().getEnvironment() == Environment.NETHER) {
             if (player.hasPermission("nonetherroof.bypass")) {
                 return;
             }
