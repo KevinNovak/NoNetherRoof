@@ -1,5 +1,4 @@
 package me.kevinnovak.nonetherroof;
-import java.io.IOException;
 
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
@@ -12,7 +11,9 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerMoveEvent;
 import org.bukkit.plugin.java.JavaPlugin;
 
-public class NoNetherRoof extends JavaPlugin implements Listener{
+import java.io.IOException;
+
+public class NoNetherRoof extends JavaPlugin implements Listener {
     // ======================
     // Enable
     // ======================
@@ -32,14 +33,14 @@ public class NoNetherRoof extends JavaPlugin implements Listener{
         }
         Bukkit.getServer().getLogger().info("[NoNetherRoof] Plugin Enabled!");
     }
-    
+
     // ======================
     // Disable
     // ======================
     public void onDisable() {
         Bukkit.getServer().getLogger().info("[NoNetherRoof] Plugin Disabled!");
     }
-    
+
     // =========================
     // Top of Nether
     // =========================
@@ -52,20 +53,20 @@ public class NoNetherRoof extends JavaPlugin implements Listener{
             }
             int top = getConfig().getInt("netherTopLayer");
             if (player.getLocation().getY() > top) {
-                Location toSpawn = new Location(player.getLocation().getWorld(), player.getLocation().getBlockX() + 0.5, top ,player.getLocation().getBlockZ() + 0.5);
+                Location toSpawn = new Location(player.getLocation().getWorld(), player.getLocation().getBlockX() + 0.5, top, player.getLocation().getBlockZ() + 0.5);
                 toSpawn.subtract(0, 1, 0).getBlock().setType(Material.AIR);
                 toSpawn.subtract(0, 1, 0).getBlock().setType(Material.AIR);
                 toSpawn.subtract(0, 1, 0).getBlock().setType(Material.NETHERRACK);
-                player.teleport(toSpawn.add(0,1,0));
+                player.teleport(toSpawn.add(0, 1, 0));
                 player.sendMessage(convertedLang("netherTopMessage"));
             }
         }
     }
-    
+
     // =========================
     // Convert String in Config
     // =========================
-    String convertedLang(String toConvert) {
+    private String convertedLang(String toConvert) {
         return ChatColor.translateAlternateColorCodes('&', getConfig().getString(toConvert));
     }
 }

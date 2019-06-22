@@ -277,10 +277,10 @@ public class MetricsLite {
         // return => base/plugins/PluginMetrics/config.yml
         return new File(new File(pluginsFolder, "PluginMetrics"), "config.yml");
     }
-    
+
     /**
      * Gets the online player (backwards compatibility)
-     * 
+     *
      * @return online player amount
      */
     private int getOnlinePlayers() {
@@ -296,7 +296,7 @@ public class MetricsLite {
                 Bukkit.getLogger().log(Level.INFO, "[Metrics] " + ex.getMessage());
             }
         }
-        
+
         return 0;
     }
 
